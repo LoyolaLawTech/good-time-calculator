@@ -1,1 +1,1 @@
-* Calculate dimunution in sentence for good behavior under Louisiana law.
+# Calculate diminution in sentence for good behavior under Louisiana law.
