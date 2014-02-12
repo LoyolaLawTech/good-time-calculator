@@ -79,7 +79,7 @@ $('form').submit(function (e) {
 
     if (!sentence || !creditedDays){
         toastr.error('I did not understand the dates you put in!' +
-        ' Please mke sure you provide numbers and units only, with no extra words.', 'Oops!');
+        ' Please make sure you provide numbers and units only, with no extra words.', 'Oops!');
         return false;
     }
 
