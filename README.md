@@ -2,8 +2,8 @@
 
 ## About
 A simple calculator to determine the diminution in sentence for good behavior under Louisiana law.  This project
-was created as part of Loyola College of Law's [http://loyolalawtech.org](Litigation and Technology Clinic), by Kevin Carter '14, 
-John Love Norris IV '13, and Assoc. Clinical Professor Judson Mitchell.
+was created as part of [Loyola College of Law](http://law.loyno.edu)'s [Litigation and Technology Clinic](http://loyolalawtech.org)
+by Kevin Carter '14, John Love Norris IV '13, and Assoc. Clinical Professor Judson Mitchell.
 
 ## Demo
 A demo is available at [http://loyolalawtech.github.io/good-time-calculator/](http://loyolalawtech.github.io/good-time-calculator/).
