@@ -167,12 +167,15 @@ toastr.options = {
     'onclick': null,
     'showDuration': '300',
     'hideDuration': '1000',
-    'timeOut': '8000',
+    'timeOut': '0',
     'extendedTimeOut': '1000',
     'showEasing': 'swing',
     'hideEasing': 'linear',
     'showMethod': 'show',
-    'hideMethod': 'fadeOut'
+    'hideMethod': 'fadeOut',
+    'onHidden': function () {
+        $('form')[0].reset();
+    }
 }
 
 //Reset
