@@ -79,7 +79,7 @@ $('form').submit(function (e) {
 
     if (!sentence || !creditedDays){
         toastr.error('I did not understand the dates you put in!' +
-        ' Please make sure you provide numbers and units only, with no extra words.', 'Oops!');
+        ' Please mke sure you provide numbers and units only, with no extra words.', 'Oops!');
         return false;
     }
 
@@ -174,3 +174,18 @@ toastr.options = {
     'showMethod': 'show',
     'hideMethod': 'fadeOut'
 }
+
+//Reset
+$('.calc-redo').click(function (e) {
+    e.preventDefault();
+    $('form')[0].reset();
+
+});
+
+//Show dislaimer
+$('.disclaimer').click(function (e) {
+    e.preventDefault();
+    toastr.info('This app is for informational purposes only and should not be considered legal advice. ' +
+    'Determinations about good time are made by the La. Department of Corrections only. Their determinations '+
+    'may differ from the information provided here.','Disclaimer');
+});
