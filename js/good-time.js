@@ -42,6 +42,27 @@ function parseDateText(val){
 
 }
 
+function humanizeDates(val) {
+
+    var str = '';
+    var values = {
+        ' year': 365,
+        ' month': 30,
+        ' day': 1
+    };
+
+    for (var x in values) {
+        var amount = Math.floor(val / values[x]);
+
+        if (amount >= 1) {
+            str += amount + x + (amount > 1 ? 's' : '') + ' ';
+            val -= amount * values[x];
+        }
+    }
+
+    return str;
+}
+
 /*
 When someone clicks the submit button on the form,
 this function is triggered
@@ -49,12 +70,17 @@ this function is triggered
 
 $('form').submit(function (e) {
     e.preventDefault();
-    var sentence = $('#days').val(); //value of "Number of Days Input"
-    var creditedDays = $('#credit').val();//value of next input, etc
+    var sentence = parseDateText($('#days').val()); //value of "Number of Days Input"
+    var creditedDays = parseDateText($('#credit').val());//value of next input, etc
     var felony = $('#type').val();
     var violence = $('#violence').val();
     var sex = $('#sex').val();
     result = $('#result');
+
+    if (!sentence || !creditedDays){
+        toastr.error('I did not understand the dates you put in! Please make sure you provide numbers and units only, with no extra words.', 'Oops!');
+        return false;
+    }
 
     if (felony === 'true'){
 
@@ -102,7 +128,29 @@ $('form').submit(function (e) {
 
         }
 
-        result.html('Your client will serve ' + numDays + ' days with good time');
+    }
 
+    var humanDate = humanizeDates(numDays);
+
+    if (humanDate){
+        result.html('Your client will serve approximately ' + humanDate + ' (' + numDays + ' days) with good time');
+    } else {
+        result.html('Your client will serve approximately ' + numDays + ' days with good time');
     }
 });
+
+//Use Toastr for error handling
+toastr.options = {
+  "closeButton": true,
+  "debug": false,
+  "positionClass": "toast-top-full-width",
+  "onclick": null,
+  "showDuration": "300",
+  "hideDuration": "1000",
+  "timeOut": "8000",
+  "extendedTimeOut": "1000",
+  "showEasing": "swing",
+  "hideEasing": "linear",
+  "showMethod": "fadeIn",
+  "hideMethod": "fadeOut"
+}

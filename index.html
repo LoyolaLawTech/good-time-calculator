@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Good Time Calculator</title>  
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+<link href="css/toastr.min.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <div class="container">
@@ -12,12 +13,12 @@
     <form role="form">
     <div class="form-group">
         <label for="days">Length of sentence</label>
-        <input type="number" class="form-control" id="days" placeholder="Number of Days in Sentence">
+        <input type="text" class="form-control" id="days" placeholder="Example: 8 years, 6 months">
     </div>
         
     <div class="form-group">
         <label for="credit">Length of time the judge credited client for time-served</label>
-        <input type="number" class="form-control" id="credit" placeholder="Number of Days Credited">
+        <input type="text" class="form-control" id="credit" placeholder="Example: 30 days">
     </div>
     
     <div class="form-group">
@@ -50,6 +51,7 @@
 </div>
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.js"></script>
+<script src="js/toastr.min.js"></script>
 <script src="js/good-time.js"></script>
 </body>
 </html>
