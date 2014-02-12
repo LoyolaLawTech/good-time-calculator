@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="js/jquery.min.js"></script>
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
 <script src=js/bootstrap.js"></script>
@@ -8,43 +9,45 @@
   <title>Good Time Calculator</title>  
 </head>
 <body>
-<form role="form">
-  <div class="form-group">
-    <label for="days">Length of sentence</label>
-    <input type="number" class="form-control" id="days" placeholder="Number of Days in Sentence">
-  </div>
+<div class="container">
+    <form role="form">
+    <div class="form-group">
+        <label for="days">Length of sentence</label>
+        <input type="number" class="form-control" id="days" placeholder="Number of Days in Sentence">
+    </div>
+        
+    <div class="form-group">
+        <label for="credit">Length of time the judge credited client for time-served</label>
+        <input type="number" class="form-control" id="credit" placeholder="Number of Days Credited">
+    </div>
     
-   <div class="form-group">
-    <label for="credit">Length of time the judge credited client for time-served</label>
-    <input type="number" class="form-control" id="credit" placeholder="Number of Days Credited">
-  </div>
- 
-  <div class="form-group">
-    <label for "type">Type of offense?</label>
-    <select class="form-control" id="type">
-      <option value="true">Felony</option>
-      <option value="false">Misdemeanor</option>
-    </select>
-  </div>
-  
-  <div class="form-group">
-    <label for "violence">Was it a crime of violence?</label>
-    <select class="form-control" id="violence">
-      <option value="true">Yes</option>
-      <option value="false" selected=selected>No</option>
-    </select>
-  </div>
+    <div class="form-group">
+        <label for "type">Type of offense?</label>
+        <select class="form-control" id="type">
+        <option value="true">Felony</option>
+        <option value="false">Misdemeanor</option>
+        </select>
+    </div>
     
-  <div class="form-group">
-    <label for "sex">Was it a sex offense?</label>
-    <select class="form-control" id="sex">
-      <option value="true">Yes</option>
-      <option value="false" selected=selected>No</option>
-    </select>
-  </div>
-    
-  <button type="submit" class="btn btn-default">Calculate Good Time</button>
-</form>
-  <div id="result"></div>
+    <div class="form-group">
+        <label for "violence">Was it a crime of violence?</label>
+        <select class="form-control" id="violence">
+        <option value="true">Yes</option>
+        <option value="false" selected=selected>No</option>
+        </select>
+    </div>
+        
+    <div class="form-group">
+        <label for "sex">Was it a sex offense?</label>
+        <select class="form-control" id="sex">
+        <option value="true">Yes</option>
+        <option value="false" selected=selected>No</option>
+        </select>
+    </div>
+        
+    <button type="submit" class="btn btn-default">Calculate Good Time</button>
+    </form>
+    <div id="result"></div>
+</div>
 </body>
 </html>
