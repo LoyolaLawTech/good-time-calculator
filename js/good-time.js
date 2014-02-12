@@ -78,7 +78,8 @@ $('form').submit(function (e) {
     result = $('#result');
 
     if (!sentence || !creditedDays){
-        toastr.error('I did not understand the dates you put in! Please make sure you provide numbers and units only, with no extra words.', 'Oops!');
+        toastr.error('I did not understand the dates you put in!' +
+        ' Please make sure you provide numbers and units only, with no extra words.', 'Oops!');
         return false;
     }
 
@@ -133,24 +134,43 @@ $('form').submit(function (e) {
     var humanDate = humanizeDates(numDays);
 
     if (humanDate){
-        result.html('Your client will serve approximately ' + humanDate + ' (' + numDays + ' days) with good time');
+        toastr.info('Your client will serve approximately ' + humanDate + ' (' + numDays + ' days) with good time', 'Result');
     } else {
-        result.html('Your client will serve approximately ' + numDays + ' days with good time');
+        toastr.info('Your client will serve approximately ' + numDays + ' days with good time', 'Result');
+    }
+});
+
+//Exclude Sentences which are not eligible from the start
+$('#sex').change(function () {
+    if ($(this).val() === 'true'){
+        toastr.error('Inmates who are convicted of sexual offenses are not eligible for good time', 'Sorry!');
+    }
+});
+
+$('#violence').change(function () {
+    if ($(this).val() === 'true'){
+        $('.hidden').removeClass('hidden');
+    }
+});
+
+$('#violence2').change(function () {
+    if ($(this).val() === 'true'){
+        toastr.error('Inmates who are convicted of two or more crimes of violence are not eligible for good time', 'Sorry!');
     }
 });
 
 //Use Toastr for error handling
 toastr.options = {
-  "closeButton": true,
-  "debug": false,
-  "positionClass": "toast-top-full-width",
-  "onclick": null,
-  "showDuration": "300",
-  "hideDuration": "1000",
-  "timeOut": "8000",
-  "extendedTimeOut": "1000",
-  "showEasing": "swing",
-  "hideEasing": "linear",
-  "showMethod": "fadeIn",
-  "hideMethod": "fadeOut"
+    'closeButton': true,
+    'debug': false,
+    'positionClass': 'toast-top-full-width',
+    'onclick': null,
+    'showDuration': '300',
+    'hideDuration': '1000',
+    'timeOut': '8000',
+    'extendedTimeOut': '1000',
+    'showEasing': 'swing',
+    'hideEasing': 'linear',
+    'showMethod': 'show',
+    'hideMethod': 'fadeOut'
 }

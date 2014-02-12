@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Good Time Calculator</title>  
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
-<link href="css/toastr.min.css" rel="stylesheet" type="text/css" />
+<link href="css/toastr.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <div class="container">
@@ -37,6 +37,14 @@
         </select>
     </div>
         
+    <div class="form-group hidden">
+        <label for "violence2">Has your client been convicted of a crime of violence before?</label>
+        <select class="form-control" id="violence2">
+        <option value="true">Yes</option>
+        <option value="false" selected=selected>No</option>
+        </select>
+    </div>
+
     <div class="form-group">
         <label for "sex">Was it a sex offense?</label>
         <select class="form-control" id="sex">
@@ -47,7 +55,7 @@
         
     <button type="submit" class="btn btn-default">Calculate Good Time</button>
     </form>
-    <div id="result"></div>
+<! insert dislaimer ->
 </div>
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.js"></script>
