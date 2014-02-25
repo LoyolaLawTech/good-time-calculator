@@ -20,6 +20,7 @@
     <icon src="icon.png" />
 
     <preference name="permissions" value="none" />
+    <preference name="android-targetSdkVersion" value="14" />
     <icon gap:density="ldpi" gap:platform="android" src="res/icon/android/icon-36-ldpi.png" />
     <icon gap:density="mdpi" gap:platform="android" src="res/icon/android/icon-48-mdpi.png" />
     <icon gap:density="hdpi" gap:platform="android" src="res/icon/android/icon-72-hdpi.png" />
