@@ -3,7 +3,7 @@
         xmlns:gap   = "http://phonegap.com/ns/1.0"
         id          = "org.loyolalawtech.good-time"
         versionCode = "12" 
-        version     = "1.5.0" >
+        version     = "1.5.1" >
 
     <!-- versionCode is optional and Android only -->
 
@@ -26,4 +26,5 @@
     <icon gap:density="hdpi" gap:platform="android" src="res/icon/android/icon-72-hdpi.png" />
     <icon gap:platform="ios" height="57" src="res/icon/ios/icon-57.png" width="57" />
     <icon gap:platform="ios" height="72" src="res/icon/ios/icon-72.png" width="72" />
+    <gap:splash src="splash.png" />
 </widget>
