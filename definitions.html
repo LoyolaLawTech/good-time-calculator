@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Good Time Calculator</title>  
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<link href="css/toastr.min.css" rel="stylesheet" type="text/css" />
+<style type="text/css" media="all">
+    .spacer{color: #2b3e50;}    
+</style>
+</head>
+<body>
+<div class="container">
+    <h3 id="define-crimes-violence"><span class="back-nav glyphicon glyphicon-chevron-left"></span> Crimes of Violence</h3>
+    <p>Crimes of Violence are defined in La. R.S 14:2(B). The statute reads:</p>
+    <p>B.  In this Code, "crime of violence" means an offense that has, as an element, the use,
+    attempted use, or threatened use of physical force against the person or property of another,
+    and that, by its very nature, involves a substantial risk that physical force against the person
+    or property of another may be used in the course of committing the offense or an offense that involves
+    the possession or use of a dangerous weapon.  The following enumerated offenses and attempts
+    to commit any of them are included as "crimes of violence":</p>
+
+    <p>(1)  Solicitation for murder</p>
+
+    <p>(2)  First degree murder</p>
+
+    <p>(3)  Second degree murder</p>
+
+    <p>(4)  Manslaughter</p>
+
+    <p>(5)  Aggravated battery</p>
+
+    <p>(6)  Second degree battery</p>
+
+    <p>(7)  Aggravated assault</p>
+
+    <p>(8)  Mingling harmful substances</p>
+
+    <p>(9)  Aggravated rape</p>
+
+    <p>(10)  Forcible rape</p>
+
+    <p>(11)  Simple rape</p>
+
+    <p>(12)  Sexual battery</p>
+
+    <p>(13)  Second degree sexual battery</p>
+
+    <p>(14)  Intentional exposure to AIDS virus</p>
+
+    <p>(15)  Aggravated kidnapping</p>
+
+    <p>(16)  Second degree kidnapping</p>
+
+    <p>(17)  Simple kidnapping</p>
+
+    <p>(18)  Aggravated arson</p>
+
+    <p>(19)  Aggravated criminal damage to property</p>
+
+    <p>(20)  Aggravated burglary</p>
+
+    <p>(21)  Armed robbery</p>
+
+    <p>(22)  First degree robbery</p>
+
+    <p>(23)  Simple robbery</p>
+
+    <p>(24)  Purse snatching</p>
+
+    <p>(25)  Extortion</p>
+
+    <p>(26)  Assault by drive-by shooting</p>
+
+    <p>(27)  Aggravated crime against nature</p>
+
+    <p>(28)  Carjacking</p>
+
+    <p>(29)  Illegal use of weapons or dangerous instrumentalities</p>
+
+    <p>(30)  Terrorism</p>
+
+    <p>(31)  Aggravated second degree battery</p>
+
+    <p>(32)  Aggravated assault upon a peace officer with a firearm</p>
+
+    <p>(33)  Aggravated assault with a firearm</p>
+
+    <p>(34)  Armed robbery; use of firearm; additional penalty</p>
+
+    <p>(35)  Second degree robbery</p>
+
+    <p>(36)  Disarming of a peace officer</p>
+
+    <p>(37)  Stalking</p>
+
+    <p>(38)  Second degree cruelty to juveniles</p>
+
+    <p>(39)  Aggravated flight from an officer</p>
+
+    <p>(40)  Aggravated incest</p>
+
+    <p>(41)  Battery of a police officer</p>
+
+    <p>(42)  Trafficking of children for sexual purposes</p>
+
+    <p>(43)  Human trafficking</p>
+
+    <p>(44)  Home invasion</p>
+
+    <h3 id="define-sex-offenses"><span class="back-nav glyphicon glyphicon-chevron-left"></span> Sex Offenses</h3>
+    <p>Sex Offenses are defined in La. R.S 14:2(B). The statute reads:</p>
+    <p style="text-align:justify">"Sex offense" means deferred adjudication, adjudication withheld, or conviction for the perpetration or
+    attempted perpetration of or conspiracy to commit human trafficking when prosecuted under the provisions of
+    R.S. 14:46.2(B)(2) or (3), R.S. 14:46.3 (trafficking of children for sexual purposes), 
+    R.S. 14:78 (incest), R.S. 14:78.1 (aggravated incest), R.S. 14:89 (crime against nature),
+    R.S. 14:89.1 (aggravated crime against nature),  R.S. 14:89.2(B)(3) (crime against nature by solicitation), 
+    R.S. 14:80 (felony carnal knowledge of a juvenile), R.S. 14:81 (indecent behavior with juveniles),
+    R.S.14:81.1 (pornography involving juveniles), R.S. 14:81.2 (molestation of a juvenile or a person with a physical or mental disability),
+    R.S. 14:81.3 (computer-aided solicitation of a minor), R.S. 14:81.4 (prohibited sexual conduct between an educator and student),
+    R.S. 14:92(A)(7) (contributing to the delinquency of juveniles), R.S. 14:93.5 (sexual battery of the infirm),
+    R.S. 14:106(A)(5) (obscenity by solicitation of a person under the age of seventeen), R.S. 14:283 (video voyeurism),
+    R.S. 14:41 (rape), R.S. 14:42 (aggravated rape), R.S. 14:42.1 (forcible rape), R.S. 14:43 (simple rape),
+    R.S. 14:43.1 (sexual battery), R.S. 14:43.2 (second degree sexual battery), R.S. 14:43.3 (oral sexual battery),
+    R.S. 14:43.5 (intentional exposure to AIDS virus), or a second or subsequent conviction of R.S. 14:283.1 (voyeurism),
+    committed on or after June 18, 1992, or committed prior to June 18, 1992, if the person, as a result of the offense, 
+    is under the custody of the Department of Public Safety and Corrections on or after June 18, 1992.  A conviction for
+    any offense provided in this definition includes a conviction for the offense under the laws of another state, 
+    or military, territorial, foreign, tribal, or federal law which is equivalent to an offense provided for in this Chapter,
+    unless the tribal court or foreign conviction was not obtained with sufficient safeguards for fundamental fairness and 
+    due process for the accused as provided by the federal guidelines adopted pursuant to the Adam Walsh Child Protection and Safety Act of 2006.
+</div>
+<script src="js/jquery.min.js"></script>
+<script type="text/javascript" charset="utf-8">
+   $(document).ready(function () { 
+        $('.back-nav').click(function () {
+            window.history.back();
+        });
+    });
+</script>
+</body>
+</html>

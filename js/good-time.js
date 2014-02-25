@@ -187,23 +187,5 @@ $('.calc-redo').click(function (e) {
 
 });
 
-//Show dislaimer
-$('.disclaimer').click(function (e) {
-    e.preventDefault();
-    toastr.info('This app is for informational purposes only and should not be considered legal advice. ' +
-    'Determinations about good time are made by the La. Department of Corrections only. Their determinations '+
-    'may differ from the information provided here.','Disclaimer');
-});
 
-//Show help
-$('.help').click(function (e) {
-    e.preventDefault();
-    toastr.info('This app helps you determine the likely diminution of sentence ("good time") for offenders ' +
-    'sentenced to imprisonment in Louisiana under La. R.S. 15:571.3.  '+
-    'To use it, you must know the sentence the offender received along with the amount of time that was ' +
-    'credited for time served while awaiting sentencing.  Enter these values with numbers and time units, like ' +
-    '"8 years" or "1 year 6 months 5 days". Click on "Calculate Good Time" and the likely number of days the  ' +
-    'offender will serve before being released on parole will appear at the top of your screen. ' + '<br><br>' +
-    'Please note that if the offender was sentenced as a habitual offender under La. R.S. 15:529.1, they will not '+
-    'receive good time.' ,'Help');
-});
+

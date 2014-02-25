@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Good Time Calculator</title>  
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<link href="css/toastr.min.css" rel="stylesheet" type="text/css" />
+<style type="text/css" media="all">
+    .spacer{color: #2b3e50;}    
+</style>
+</head>
+<body>
+<div class="container">
+    <h2 id="help-text"><span class="back-nav glyphicon glyphicon-chevron-left"></span> Help</h2>
+
+    <p>This app helps you determine the likely diminution of sentence ("good time") for offenders 
+    sentenced to imprisonment in Louisiana under La. R.S. 15:571.3.  
+    To use it, you must know the sentence the offender received along with the amount of time that was 
+    credited for time served while awaiting sentencing.  Enter these values with numbers and time units, like 
+    "8 years" or "1 year 6 months 5 days". Click on "Calculate Good Time" and the likely number of days the  
+    offender will serve before being released on parole will appear at the top of your screen. </p>
+    <p>Please note that if the offender was sentenced as a habitual offender under La. R.S. 15:529.1, they will not 
+    receive good time</p>
+
+    <h2 id="disclaimer"><span class="back-nav glyphicon glyphicon-chevron-left"></span> Disclaimer</h2>
+    <p>This app is for informational purposes only and should not be considered legal advice.
+    Determinations about good time are made by the La. Department of Corrections only. Their determinations
+    may differ from the information provided here.</p>
+</div>
+<script src="js/jquery.min.js"></script>
+<script type="text/javascript" charset="utf-8">
+   $(document).ready(function () { 
+        $('.back-nav').click(function () {
+            window.history.back();
+        });
+    });
+</script>
+</body>
+</html>

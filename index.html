@@ -6,6 +6,9 @@
 <title>Good Time Calculator</title>  
 <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 <link href="css/toastr.min.css" rel="stylesheet" type="text/css" />
+<style type="text/css" media="all">
+    .spacer{color: #2b3e50;}    
+</style>
 </head>
 <body>
 <div class="container">
@@ -30,7 +33,8 @@
     </div>
     
     <div class="form-group">
-        <label for "violence">Was it a crime of violence?</label>
+        <label for "violence">Was it a crime of violence? <span class="spacer">...</span>
+        <a href="definitions.html#define-crimes-violence"><span class="glyphicon glyphicon-question-sign"></span></a></label>
         <select class="form-control" id="violence">
         <option value="true">Yes</option>
         <option value="false" selected=selected>No</option>
@@ -46,7 +50,8 @@
     </div>
 
     <div class="form-group">
-        <label for "sex">Was it a sex offense?</label>
+        <label for "sex">Was it a sex offense? <span class="spacer">...</span>
+        <a href="definitions.html#define-sex-offenses"><span class="glyphicon glyphicon-question-sign"></span></a></label>
         <select class="form-control" id="sex">
         <option value="true">Yes</option>
         <option value="false" selected=selected>No</option>
@@ -56,11 +61,12 @@
     <div class="form-group">
     <button type="submit" class="btn btn-primary">Calculate Good Time</button>
     <button class="btn btn-default calc-redo">Redo</button>
-    <a class="help" href="#">Help</a>  
+    <span class="spacer">..</span>
+    <a href="help.html">Help</a>  
     </div>
     </form>
     <div class="center-block">
-        <a class="disclaimer" href="#">Disclaimer</a>
+        <a href="help.html#disclaimer">Disclaimer</a>
     </div>
 </div>
 <script src="js/jquery.min.js"></script>
