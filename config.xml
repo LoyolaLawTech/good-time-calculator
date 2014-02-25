@@ -10,11 +10,11 @@
     <name>Good Time Calculator</name>
 
     <description>
-        A simple calculator to determine the diminution in sentence ("good time") for good behavior under Louisiana law. 
+        A simple calculator to determine the diminution in sentence ("good time") for good behavior under Louisiana law.
     </description>
 
     <author href="http://loyolalawtech.org" email="judson@loyolalawtech.org">
-        Judson Mitchell, Kevin Carter, John Love Norris IV 
+        Judson Mitchell, Kevin Carter, John Love Norris IV
     </author>
 
     <icon src="icon.png" />
