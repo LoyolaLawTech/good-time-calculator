@@ -93,7 +93,7 @@ $('form').submit(function (e) {
             time served prior to sentencing.
             */
 
-            numDays = (sentence - creditedDays) * 0.85;
+            numDays = (sentence * 0.85) - creditedDays;
 
         } else {
             /*
@@ -103,7 +103,7 @@ $('form').submit(function (e) {
             the judge for time served prior to sentencing.
             */
 
-            numDays = (sentence - creditedDays) * 0.4;
+            numDays = (sentence * 0.4) - creditedDays;
         }
 
     } else {
@@ -116,7 +116,7 @@ $('form').submit(function (e) {
             time served prior to sentencing
             */
 
-            numDays = (sentence - creditedDays) * 0.85;
+            numDays = (sentence * 0.85) - creditedDays;
 
         } else {
             /*
@@ -125,7 +125,7 @@ $('form').submit(function (e) {
             of time the judge credited the client for time served prior to sentencing.
             */
 
-            numDays = (sentence - creditedDays) * 0.5;
+            numDays = (sentence * 0.5) - creditedDays;
 
         }
 
